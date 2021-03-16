@@ -58,3 +58,19 @@
   font-size: 30px;
   cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+  .hero-modal {
+    width: 300px;
+  }
+
+  .hero-modal > img {
+    width: 8rem;
+  }
+
+  .close-modal-button {
+    left: 85%;
+    font-size:30px;
+  }
+
+}

@@ -2,12 +2,11 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { triggerGetHeroesData, triggerSearchHeroByName } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import HeroGrid from '../organisms/HeroGrid'
-import ReactPaginate from 'react-paginate';
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Pagination from 'react-responsive-pagination';
 
 import './Home.scss'
-
 
 const Home = () => {
   const heroesPages = 73
@@ -75,11 +74,6 @@ const Home = () => {
     setModalHero({})
   }
 
-  const handleChangePage = useCallback((data) => {
-    if(data.selected){
-      setPage(data.selected + 1)
-    }
-  },[])
 
   return (
     <>
@@ -110,16 +104,11 @@ const Home = () => {
     )
     }
     {!heroSearched && (
-      <ReactPaginate
-        pageCount={73}
-        pageRangeDisplayed={5}
-        marginPagesDisplayed={3}
-        onPageChange={handleChangePage}
-        containerClassName={"pagination"}
-        previousLinkClassName={"pagination__link"}
-        nextLinkClassName={"pagination__link"}
-        disabledClassName={"pagination__link--disabled"}
-        activeClassName={"pagination__link--active"}
+      <Pagination
+        current={page}
+        total={73}
+        onPageChange={setPage}
+
     />
     )}
     </>
