@@ -1,0 +1,20 @@
+.hero-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.no-modal {
+  display: none;
+}
+
+.modal-container {
+  display:flex;
+}

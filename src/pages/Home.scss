@@ -1,0 +1,46 @@
+body {
+  background: url('https://image.freepik.com/free-vector/comic-book-background-design_105164-288.jpg') center;
+  background-size: cover;
+  padding: 4rem 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.pagination a {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+}
+
+.pagination__link {
+  font-weight: bold;
+}
+
+.pagination__link--active a {
+  color: white;
+  background-color: black;
+}
+
+.pagination__link--disabled a {
+  background-color: black;
+  color:white;
+  border: 1px solid black;
+}
+
+.no-pagination {
+  display: none;
+}
+
+.loader-div {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
